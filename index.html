@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Welcome to the chat application!</title>
+
+        <script defer src="http://localhost:1234/socket.io/sockelt.io.js"></script>
+        <script defer src="script.js"></script>
+        <style>
+            body{
+                background-color: antiquewhite;
+                color: blueviolet;
+            }
+            div .me{
+                background-color: white;
+                color: blue;
+            }
+            div .not-me{
+                background-color: gray;
+                color: red;
+            }
+            #container{
+                border: 1px dotted black;
+                margin-left: 100px;
+            }
+            #message-container{
+                width: 80%;
+                max-width: 1200px;
+                height: 75%;
+            }
+            #message-container div{
+                padding: 5px;
+            }
+            #send-container input:nth-of-type(1){
+                width: 80%;
+                margin-left: 3%;
+            }
+            #send-container input:nth-of-type(2){
+                width: 15%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="message-container">
+            </div>
+            <form id="send-container">
+                <input type="text" id="message-input">
+                <input type="submit" id="message-submit">
+            </form>
+        </div>
+    </body>
+</html>
